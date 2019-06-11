@@ -1,0 +1,50 @@
+1)
+
+Input	           Processing 	       	 OutPut
+Coustomer Name   Coustomer Details		Coustmer Name
+Purchase Amount	Compute Sales Tax		Purchase Amount
+Tax Code        Compute Total Amt		Sales Tax
+				Print Coustmer details	Total Amt
+	          	        
+						
+Process customer_record
+Read customer name, purchase amount,tax code
+	IF tax code = 0 THEN
+		sales tax = 0
+	ELSE
+		IF tax code =1 THEN
+			sales tax = purc amt * .03
+	ELSE
+		IF tax code = 2 THEN
+			sales tax = purch amt * .05
+
+2)
+
+Compute employee pay
+
+Set valid input fields to true
+Set error message to blank
+
+Read emp no, pay rate, hrs worked
+If pay rate > $25 THEN
+	Error message = “Pay rate exceeds $25.00”
+	Print emp no, pay rate, hrs worked, error message
+	Valid input fields = false
+	
+END IF
+IF hrs worked > 60 THEN
+	Error message = “Hours worked exceeds 60”
+	Print emp no, pay rate, hrs worked, error message
+	Valid input fields = false
+END IF
+IF valid input fields THEN
+	IF hrs worked <=35 THEN
+		Emp weekly pay = pay rate*hrs worked
+ELSE 
+	Overtime_hrs = hrs_worked – 35
+	Overtime_pay = overtime_hrs*pay_rate*1.5
+	Emp_weekly_pay=(pay_rate*35) + overtime_pay
+ENDIF
+Print emp_no, pay_rate, hrs_worked, emp_weekly_pay
+ENDIF
+END
